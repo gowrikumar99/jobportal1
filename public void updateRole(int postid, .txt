@@ -1,0 +1,113 @@
+public void updateRole(int postid, String urole)throws SQLException
+	{
+		PreparedStatement pst=con.prepareStatement("update jobclass set jobrole=? where jobid=?");
+		pst.setInt(1, postid);
+		pst.setString(2, urole);
+		int i=pst.executeUpdate();
+		if(i>0)
+		{
+			System.out.println(i+" post updated succesfully");
+		}
+		else
+			System.out.println("update failed");
+	}
+
+System.out.println("what do tou want to update in the post \n 1.jobrole \t 2.company_name \t 3.job_description \t 4.qualification
+                   \n 5.keyskill \t 6.location \t 7.experience \t 8.postdate \t 9.type_of_job \t  10.domain \n enter your choice");
+
+public void updateLocation(int postid, String ulocation)throws SQLException
+	{
+		PreparedStatement pst=con.prepareStatement("update jobclass set location=? where jobid=?");
+		pst.setInt(1, postid);
+		pst.setString(2, ulocation);
+		int f=pst.executeUpdate();
+		if(f>0)
+		{
+			System.out.println(f+" post updated succesfully");
+		}
+		else
+			System.out.println("update failed");
+	}
+
+public void updateExperience(int postid, String uexperience)throws SQLException
+	{
+		PreparedStatement pst=con.prepareStatement("update jobclass set experience=? where jobid=?");
+		pst.setInt(1, postid);
+		pst.setString(2, uexperience);
+		int g=pst.executeUpdate();
+		if(g>0)
+		{
+			System.out.println(g+" post updated succesfully");
+		}
+		else
+			System.out.println("update failed");
+	}
+	
+public void updatePostdate(int postid, String upostdate)throws SQLException
+	{
+		PreparedStatement pst=con.prepareStatement("update jobclass set postdate=? where jobid=?");
+		pst.setInt(1, postid);
+		pst.setString(2, upostdate);
+		int h=pst.executeUpdate();
+		if(h>0)
+		{
+			System.out.println(h+" post updated succesfully");
+		}
+		else
+			System.out.println("update failed");
+	}
+
+public void updateType_of_job(int postid, String utype_of_job)throws SQLException
+	{
+		PreparedStatement pst=con.prepareStatement("update jobclass set type_of_job=? where jobid=?");
+		pst.setInt(1, postid);
+		pst.setString(2, utype_of_job);
+		int j=pst.executeUpdate();
+		if(j>0)
+		{
+			System.out.println(j+" post updated succesfully");
+		}
+		else
+			System.out.println("update failed");
+	}
+
+public void updateDomain(int postid, String udomain)throws SQLException
+	{
+		PreparedStatement pst=con.prepareStatement("update jobclass set jobdomain=? where jobid=?");
+		pst.setInt(1, postid);
+		pst.setString(2, udomain);
+		int k=pst.executeUpdate();
+		if(k>0)
+		{
+			System.out.println(k+" post updated succesfully");
+		}
+		else
+			System.out.println("update failed");
+	}
+
+public void updateEntire_job(int postid, String uentire_job)throws SQLException
+	{
+		PreparedStatement pst=con.prepareStatement("update jobclass set jobentire_job=? where jobid=?");
+/* 
+System.out.println("what do tou want to update in the post \n 1.jobrole \t 2.company_name \t 3.job_description \t 4.qualification
+                   \n 5.keyskill \t 6.location \t 7.experience \t 8.postdate \t 9.type_of_job \t  10.domain \n enter your choice");
+*/
+		pst.setInt(1, postid);
+		pst.setString(2, ujobrole );
+                pst.setString(3, ucompany_name);
+                pst.setString(4, ujob_description );
+                pst.setString(5, uqualification);
+                pst.setString(6, ukeyskill);
+                pst.setString(7, ulocation);
+                pst.setString(8, uexperience);
+                pst.setString(9, upostdate);
+                pst.setString(10, utype_of_job);
+                pst.setString(11, udomain);
+		int l=pst.executeUpdate();
+		if(l>0)
+		{
+			System.out.println(l+" post updated succesfully");
+		}
+		else
+			System.out.println("update failed");
+	}
